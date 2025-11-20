@@ -1,0 +1,73 @@
+[
+  {
+    "description": "Rule 1: HappyFox Assignment (The 'Selection' Rule)",
+    "predicate": "All",
+    "conditions": [
+      {
+        "field": "From",
+        "predicate": "contains",
+        "value": "happyfox"
+      },
+      {
+        "field": "Subject",
+        "predicate": "contains",
+        "value": "Assignment"
+      },
+      {
+        "field": "Received Date/Time",
+        "predicate": "less than",
+        "value": "20",
+        "unit": "days"
+      }
+    ],
+    "actions": [
+      {
+        "type": "mark_as_read"
+      },
+      {
+        "type": "move_message",
+        "value": "IMPORTANT"
+      }
+    ]
+  },
+  {
+    "description": "Rule 2: Reject Internshala Spam",
+    "predicate": "Any",
+    "conditions": [
+      {
+        "field": "From",
+        "predicate": "contains",
+        "value": "internshala"
+      }
+    ],
+    "actions": [
+      {
+        "type": "mark_as_read"
+      },
+      {
+        "type": "move_message",
+        "value": "TRASH"
+      }
+    ]
+  },
+  {
+    "description": "Rule 3: Self-Test from Secondary Email",
+    "predicate": "All",
+    "conditions": [
+      {
+        "field": "From",
+        "predicate": "contains",
+        "value": "yashdodwani44@gmail.com"
+      }
+    ],
+    "actions": [
+      {
+        "type": "mark_as_read"
+      },
+      {
+        "type": "move_message",
+        "value": "STARRED"
+      }
+    ]
+  }
+]
