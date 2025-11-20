@@ -1,2 +1,15 @@
 .venv/
 .env
+# Ignore JetBrains / IntelliJ IDEA project files
+.idea/
+*.iml
+
+# Ignore HTTP request scratch file
+test_main.http
+
+# (Optional) Common Python artifacts
+__pycache__/
+*.pyc
+
+# (Optional) OS junk
+.DS_Store
