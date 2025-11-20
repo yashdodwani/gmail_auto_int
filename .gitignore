@@ -1,5 +1,8 @@
 .venv/
 .env
+.env.*
+!.env.example
+
 # Ignore JetBrains / IntelliJ IDEA project files
 .idea/
 *.iml
