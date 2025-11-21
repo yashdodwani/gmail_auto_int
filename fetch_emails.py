@@ -1,6 +1,7 @@
 import os.path
 from google.oauth2.credentials import Credentials
 from googleapiclient.discovery import build
+from db import save_emails_to_db
 
 # If modifying these scopes, delete the file token.json.
 SCOPES = ['https://www.googleapis.com/auth/gmail.modify']
@@ -76,4 +77,9 @@ def fetch_recent_emails(max_results=10):
 
 
 if __name__ == '__main__':
-    fetch_recent_emails()
+    # 1. Fetch the emails
+    emails = fetch_recent_emails(max_results=15)
+
+    # 2. Save them to DB
+    if emails:
+        save_emails_to_db(emails)
