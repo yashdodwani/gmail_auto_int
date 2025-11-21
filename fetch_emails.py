@@ -78,7 +78,7 @@ def fetch_recent_emails(max_results=10):
 
 if __name__ == '__main__':
     # 1. Fetch the emails
-    emails = fetch_recent_emails(max_results=15)
+    emails = fetch_recent_emails(max_results=100)
 
     # 2. Save them to DB
     if emails:

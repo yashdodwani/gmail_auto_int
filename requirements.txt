@@ -7,3 +7,4 @@ google-auth
 google-auth-oauthlib
 # Gmail API client (likely needed after auth)
 google-api-python-client
+python-dateutil
