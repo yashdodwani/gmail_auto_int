@@ -1,3 +1,9 @@
-psycopg2-binary
+# Core env and database libs
 python-dotenv
 psycopg2-binary
+
+# Google Auth stack for Gmail OAuth flow
+google-auth
+google-auth-oauthlib
+# Gmail API client (likely needed after auth)
+google-api-python-client

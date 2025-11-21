@@ -16,3 +16,7 @@ __pycache__/
 
 # (Optional) OS junk
 .DS_Store
+
+# Ignore Google Credentials
+credentials.json
+token.json
